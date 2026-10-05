@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Musical - Explora, Toca y Aprende</title>
+    <!-- Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fuente Google Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between selection:bg-purple-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-purple-500/30">
+                    <i class="fa-solid font-bold fa-music text-white text-xl"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-purple-400 to-indigo-300 bg-clip-text text-transparent">
+                    Harmonía
+                </span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#musica" class="hover:text-purple-400 transition-colors">Música</a>
+                <a href="#instrumentos" class="hover:text-purple-400 transition-colors">Instrumentos</a>
+                <a href="#aprende" class="hover:text-purple-400 transition-colors">Aprende</a>
+            </nav>
+
+            <button onclick="document.getElementById('aprende').scrollIntoView({behavior: 'smooth'})" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium text-sm transition-all duration-300 shadow-md shadow-purple-600/20 active:scale-95">
+                <span>Comenzar</span>
+                <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+        </div>
+    </header>
+       
+    <!-- Hero Section -->
+    <section class="relative py-20 px-4 overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase tracking-wider text-purple-400 bg-purple-950/60 border border-purple-800/50 rounded-full">
+                El Arte del Sonido
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 text-white">
+                Descubre la magia de la <span class="bg-gradient-to-r from-purple-400 via-indigo-300 to-pink-400 bg-clip-text text-transparent">Música</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Un espacio diseñado para explorar la teoría musical, conocer los instrumentos y dar tus primeros pasos en la interpretación.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content Container --> <img imagenes src="img/musica.jpg" alt="musica">
+    <main class="max-w-6xl mx-auto px-4 py-8 space-y-24 flex-grow">
+
+        <!-- Seccion 1: Música --> 
+        <section id="musica" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="p-3 bg-purple-500/10 rounded-xl text-purple-400 border border-purple-500/20">
+                    <i class="fa-solid fa-compact-disc text-2xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">1. Música</h2>
+                    <p class="text-slate-400 text-sm">El lenguaje universal de las emociones</p>
+                </div>
+            </div>
+
+            <!-- Card principal de Música -->
+            <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-6 sm:p-8 backdrop-blur-sm shadow-xl hover:border-slate-600/80 transition-all">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-xl font-semibold text-purple-300 mb-3">¿Qué es la Música?</h3>
+                        <p class="text-slate-300 leading-relaxed mb-4 text-sm sm:text-base">
+                            La música es la combinación ordenada de ritmo, melodía y armonía que transmite sensaciones y estados de ánimo. A lo largo de la historia, ha servido como expresión cultural, arte e inspiración para la humanidad.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-3 py-1 bg-slate-700/50 rounded-lg text-xs font-medium text-slate-300">Ritmo</span>
+                            <span class="px-3 py-1 bg-slate-700/50 rounded-lg text-xs font-medium text-slate-300">Melodía</span>
+                            <span class="px-3 py-1 bg-slate-700/50 rounded-lg text-xs font-medium text-slate-300">Armonía</span>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-900/40 to-slate-900/80 p-6 rounded-xl border border-purple-500/10">
+                        <h4 class="font-semibold text-slate-200 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-quote-left text-purple-400 text-xs"></i> Cita Destacada
+                        </h4>
+                        <blockquote class="italic text-slate-400 text-sm mb-3">
+                            "Sin la música, la vida sería un error."
+                        </blockquote>
+                        <cite class="text-xs text-purple-400 font-medium tracking-wide">— Friedrich Nietzsche</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion 2: Instrumentos -->  <img src="img/musica.jpg" alt="Musica">
+        <section id="instrumentos" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="p-3 bg-indigo-500/10 rounded-xl text-indigo-400 border border-indigo-500/20">
+                    <i class="fa-solid fa-guitar text-2xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">2. Instrumentos</h2>
+                    <p class="text-slate-400 text-sm">Herramientas que dan vida al sonido</p>
+                </div>
+            </div>
+
+            <!-- Subcard de Instrumentos -->
+            <div class="grid sm:grid-cols-3 gap-6">
+                <!-- Cuerda -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-6 hover:border-indigo-500/40 transition-all hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 mb-4">
+                        <i class="fa-solid fa-guitar text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-2">Cuerda</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Producen sonido mediante la vibración de cuerdas. Ejemplos: Guitarra, Violín, Piano y Arpa.
+                    </p>
+                </div>
+
+                <!-- Viento -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-6 hover:border-indigo-500/40 transition-all hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 mb-4">
+                        <i class="fa-solid fa-wind text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-2">Viento</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Generan notas al hacer vibrar una columna de aire en su interior. Ejemplos: Flauta, Saxofón y Trompeta.
+                    </p>
+                </div>
+
+                <!-- Percusión -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-2xl p-6 hover:border-indigo-500/40 transition-all hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 mb-4">
+                        <i class="fa-solid fa-drum text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white mb-2">Percusión</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        El sonido se origina al percutir, sacudir o frotar el cuerpo del instrumento. Ejemplos: Batería, Xilófono y Tambor.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seccion 3: Aprende -->
+        <section id="aprende" class="scroll-mt-24">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="p-3 bg-pink-500/10 rounded-xl text-pink-400 border border-pink-500/20">
+                    <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">3. Aprende</h2>
+                    <p class="text-slate-400 text-sm">Comienza tu viaje de aprendizaje musical</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta de aprendizaje interactivas -->
+            <div class="bg-gradient-to-r from-slate-800/80 via-slate-800/40 to-slate-800/80 border border-slate-700/60 rounded-2xl p-6 sm:p-8">
+                <p class="text-slate-300 mb-6 text-sm sm:text-base max-w-3xl">
+                    Aprender música estimula la creatividad, la disciplina y la coordinación. No importa la edad, lo importante es comenzar con constancia y disfrute.
+                </p>
+
+                <!-- Consejos Rápidos -->
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <div class="flex items-start space-x-3 bg-slate-900/50 p-4 rounded-xl border border-slate-700/40">
+                        <i class="fa-solid fa-check-circle text-pink-400 mt-1"></i>
+                        <div>
+                            <h4 class="text-sm font-semibold text-white">Practica a diario</h4>
+                            <p class="text-xs text-slate-400">Dedica al menos 15 a 20 minutos diarios para crear memoria muscular.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-3 bg-slate-900/50 p-4 rounded-xl border border-slate-700/40">
+                        <i class="fa-solid fa-check-circle text-pink-400 mt-1"></i>
+                        <div>
+                            <h4 class="text-sm font-semibold text-white">Entrena tu oído</h4>
+                            <p class="text-xs text-slate-400">Escucha con atención diferentes géneros para identificar ritmo y acordes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón Interactivo de Simulación -->
+                <div class="mt-8 pt-6 border-t border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <span class="text-xs text-slate-400">¿Quieres probar una nota musical básica?</span>
+                    <button id="btnAudio" onclick="playTone()" class="px-5 py-2.5 bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-500 hover:to-purple-500 text-white text-xs font-semibold rounded-xl shadow-lg shadow-pink-600/20 active:scale-95 transition-all duration-200 flex items-center gap-2">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <span>Reproducir Nota Do (C4)</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950/60 mt-12 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center text-xs text-slate-500 space-y-2">
+            <p>© 2026 Harmonía - Plataforma sobre Música, Instrumentos y Aprendizaje.</p>
+            <p>Diseñado de forma limpia, moderna y accesible.</p>
+        </div>
+    </footer>
